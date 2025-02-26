@@ -1,0 +1,24 @@
+/* Posição da paginação abaixo do slider */
+.mySwiper .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  /* Estilização dos bullets */
+  .mySwiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.25) !important; /* Define a cor dos bullets inativos */
+    border-radius: 50%;
+    margin: 0 8px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Bullet ativo */
+  .mySwiper .swiper-pagination-bullet-active {
+    background-color: white !important; /* Bullet ativo fica totalmente branco */
+  }
+  

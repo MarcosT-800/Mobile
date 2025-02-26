@@ -1,0 +1,22 @@
+.tabbar {
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.label-menu {
+    align-self: stretch;
+    font-family: "Poppins";
+    color: #666666;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 13px;
+}
+
+.label-menu.active {
+    color: #D70404;
+}

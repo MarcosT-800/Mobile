@@ -1,0 +1,340 @@
+/* Estilo global e variáveis */
+:root {
+  --primary-red: #e63946;
+  --light-red: #f8d7da;
+  --dark-red: #c72c39;
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #6c757d;
+  --black: #212529;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+}
+
+/* Cabeçalho */
+.notifications-header {
+  box-shadow: var(--shadow-sm);
+}
+
+.notifications-header ion-toolbar {
+  --background: var(--white);
+  --border-width: 0;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-red);
+  text-align: center;
+}
+
+/* Conteúdo */
+.notifications-content {
+  --background: var(--white);
+  --padding-top: 1rem;
+}
+
+.notification-bell-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Lista de notificações */
+.notifications-list {
+  background: transparent;
+  padding: 0 12px;
+}
+
+.notification-item-sliding {
+  margin-bottom: 10px;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.notification-item-sliding:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.notification-item {
+  --background: var(--white);
+  --border-radius: var(--border-radius-md);
+  --border-style: none;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --inner-padding-end: 0;
+}
+
+.notification-item::part(native) {
+  border-radius: var(--border-radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.notification-item::part(native):hover {
+  background-color: var(--light-gray);
+}
+
+.notification-avatar {
+  --border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+  border: 2px solid var(--light-red);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.notification-avatar img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.notification-label h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.notification-label p {
+  font-size: 14px;
+  color: var(--dark-gray);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
+/* Opções de deslizamento */
+.notification-option {
+  height: 100%;
+  min-width: 70px;
+  font-size: 16px;
+  transition: background-color var(--transition-fast);
+}
+
+ion-item-option.notification-option[color="primary"] {
+  --background: #2e77ed;
+  --color: var(--white);
+}
+
+ion-item-option.notification-option[color="tertiary"] {
+  --background: #4c8dff;
+  --color: var(--white);
+}
+
+ion-item-option.notification-option[color="danger"] {
+  --background: var(--primary-red);
+  --color: var(--white);
+}
+
+/* Detalhes da notificação */
+.notification-detail-container {
+  padding: 0 16px;
+  margin-top: 20px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.notification-detail-card {
+  margin: 0;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  background: var(--white);
+  border-top: 3px solid var(--primary-red);
+}
+
+.notification-detail-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.detail-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  border: 2px solid var(--light-red);
+}
+
+.detail-title {
+  flex: 1;
+}
+
+.detail-title h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-red);
+}
+
+.detail-time {
+  font-size: 12px;
+  color: var(--dark-gray);
+}
+
+.notification-detail-content {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--black);
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--medium-gray);
+}
+
+/* Skeleton Loading Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(to right, var(--light-gray) 8%, var(--medium-gray) 18%, var(--light-gray) 33%);
+  background-size: 800px 104px;
+  animation: shimmer 1.5s linear infinite;
+  border-radius: var(--border-radius-md);
+  height: 16px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.skeleton-item {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: var(--border-radius-md);
+  background-color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.skeleton-header {
+  display: flex;
+  align-items: center;
+}
+
+.skeleton-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.skeleton-text {
+  flex: 1;
+}
+
+.skeleton-title {
+  height: 18px;
+  width: 70%;
+  margin-bottom: 8px;
+}
+
+.skeleton-message {
+  height: 14px;
+  width: 90%;
+}
+
+/* Animações e efeitos */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-red);
+  animation: pulse 1.5s infinite;
+}
+
+/* Component de entrada para notificações */
+.notification-enter {
+  animation: slideIn 0.4s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Estilo para nenhuma notificação */
+.no-notifications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.no-notifications-icon {
+  font-size: 64px;
+  color: var(--light-red);
+  margin-bottom: 16px;
+}
+
+.no-notifications-text {
+  font-size: 18px;
+  color: var(--dark-gray);
+  margin-bottom: 8px;
+}
+
+.no-notifications-subtext {
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
+/* Código adicional para skeleton loading */
+.skeleton-loading {
+  padding: 0 12px;
+}
+
+/* Estilização para swipe actions */
+ion-item-sliding.activated {
+  transform: translateX(0) !important;
+}

@@ -1,0 +1,212 @@
+/* Simulation1.css */
+.custom-dash-content {
+    --background: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navbar Styles */
+.custom-simulation1-navbar {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.custom-simulation1-navbar h3 {
+    margin: 0 auto;
+    color: #333;
+    font-weight: 600;
+}
+
+.back-button {
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: rgba(215, 4, 4, 0.1);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-simulation1-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* How it Works Section */
+.how-it-works-section {
+    padding: 2rem 1rem;
+}
+
+.custom-simulation1-comofunciona {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* Steps Styles */
+.styled-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-number-container {
+    margin-right: 1rem;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #D70404;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content strong {
+    display: block;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.step-content p {
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Button Styles */
+.custom-button-content {
+    padding: 1.5rem;
+    position: sticky;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-button-modal1 {
+    background: #D70404;
+    color: white;
+    border: none;
+    padding: 1rem 4rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 15px rgba(215, 4, 4, 0.3);
+}
+
+.custom-button-modal1:hover {
+    background: #b50303;
+    transform: translateY(-2px);
+}
+
+.custom-button-modal1:active {
+    transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.slide-in {
+    animation: slideIn 0.8s ease-out;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custom-simulation1-navbar h3 {
+        font-size: 1.2rem;
+    }
+
+    .step-item {
+        padding: 1rem;
+    }
+
+    .custom-button-modal1 {
+        padding: 0.8rem 3rem;
+        width: 100%;
+        max-width: 300px;
+    }
+}

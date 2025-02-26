@@ -1,0 +1,294 @@
+/* Conteúdo Geral */
+.login-content {
+    --background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Container Principal */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    animation: zoomIn 0.8s ease-out;
+}
+
+/* Header */
+.login-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.login-logo {
+    width: 140px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.login-header:hover .login-logo {
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 12px rgba(237, 69, 69, 0.3));
+}
+
+.login-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    animation: slideIn 0.6s ease-out;
+}
+
+.login-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    font-weight: 400;
+    animation: slideIn 0.7s ease-out;
+}
+
+/* Formulário */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 14px 18px;
+    background: #f8f9fa;
+    border-radius: 16px;
+    border: 2px solid #e0e0e0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    margin-left: 14px;
+    --outline: none;
+}
+
+
+.input-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.input-wrapper:hover .input-icon {
+    transform: scale(1.1);
+}
+
+.login-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+}
+
+.login-input::placeholder {
+    color: #bbb;
+    font-style: italic;
+}
+
+/* Opções de Login */
+.login-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.forgot-password {
+    font-size: 13px;
+    color: #ed4545;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #d32f2f;
+    transform: translateX(3px);
+}
+
+/* Botão de Login */
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #ed4545 0%, #f06a73 100%);
+    border: none;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(237, 69, 69, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    margin-top: 30px;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(237, 69, 69, 0.4);
+    background: linear-gradient(135deg, #d32f2f 0%, #ed4545 100%);
+}
+
+/* Seção de Suporte */
+.login-support {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 40px 0;
+    animation: slideIn 0.9s ease-out;
+}
+
+.support-line {
+    flex: 1;
+    height: 2px;
+    transition: stroke 0.3s ease;
+}
+
+.login-support:hover .support-line {
+    stroke: #ed4545;
+}
+
+.support-text {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Seção de Registro */
+.login-register {
+    text-align: center;
+}
+
+.register-text {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.register-link {
+    color: #ed4545;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.register-link:hover {
+    color: #d32f2f;
+    transform: translateX(3px);
+}
+
+/* Skeleton Loader */
+.login-skeleton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.skeleton-logo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #e5e5e5 25%, #f0f0f0 50%, #e5e5e5 75%);
+    background-size: 200% 100%;
+    animation: skeletonShimmer 2s infinite;
+}
+
+.skeleton-title {
+    width: 220px;
+    height: 32px;
+    background: linear-gradient(90deg, #e5e5e5 25%, #f0f0f0 50%, #e5e5e5 75%);
+    background-size: 200% 100%;
+    border-radius: 8px;
+    animation: skeletonShimmer 2s infinite;
+}
+
+.skeleton-input {
+    width: 100%;
+    height: 52px;
+    background: linear-gradient(90deg, #e5e5e5 25%, #f0f0f0 50%, #e5e5e5 75%);
+    background-size: 200% 100%;
+    border-radius: 16px;
+    animation: skeletonShimmer 2s infinite;
+}
+
+.skeleton-button {
+    width: 100%;
+    height: 52px;
+    background: linear-gradient(90deg, #e5e5e5 25%, #f0f0f0 50%, #e5e5e5 75%);
+    background-size: 200% 100%;
+    border-radius: 16px;
+    animation: skeletonShimmer 2s infinite;
+    margin-top: 20px;
+}
+
+.skeleton-text {
+    width: 150px;
+    height: 16px;
+    background: linear-gradient(90deg, #e5e5e5 25%, #f0f0f0 50%, #e5e5e5 75%);
+    background-size: 200% 100%;
+    border-radius: 8px;
+    animation: skeletonShimmer 2s infinite;
+}
+
+/* Toast */
+.login-toast {
+    --background: #fff;
+    --border-radius: 16px;
+    --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #333;
+}
+
+/* Animações */
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes skeletonShimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+} 

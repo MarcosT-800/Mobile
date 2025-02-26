@@ -1,0 +1,239 @@
+/* Geral */
+.ph-cadastro-content {
+    --background: linear-gradient(145deg, #0f1419 0%, #1a2329 100%);
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+  }
+  
+  .ph-cadastro-container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Fundo Dinâmico */
+  .ph-cadastro-container::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 77, 77, 0.2) 0%, transparent 70%);
+    top: -100px;
+    left: -100px;
+    animation: floatOrb 6s infinite ease-in-out;
+    z-index: 0;
+  }
+  
+  .ph-cadastro-container::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    bottom: -50px;
+    right: -50px;
+    animation: floatOrb 8s infinite ease-in-out;
+    z-index: 0;
+  }
+  
+  /* Navbar */
+  .ph-cadastro-navbar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    animation: fadeIn 0.5s ease-out;
+    z-index: 2;
+  }
+  
+  .ph-back-btn {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .ph-back-btn:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  
+  /* Cabeçalho */
+  .ph-cadastro-header {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeUp 0.6s ease-out;
+    z-index: 1;
+  }
+  
+  .ph-cadastro-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #ffffff 0%, #ff4d4d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGlow 3s infinite alternate;
+  }
+  
+  .ph-cadastro-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Barra de Progresso */
+  .ph-progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 15px;
+  }
+  
+  .ph-progress {
+    height: 100%;
+    background: #ff4d4d;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  /* Formulário */
+  .ph-cadastro-form {
+    flex-grow: 1;
+    animation: fadeIn 0.8s ease-out;
+    z-index: 1;
+  }
+  
+  .ph-form-item {
+    --background: rgba(255, 255, 255, 0.05);
+    --border-radius: 12px;
+    --padding-start: 15px;
+    --padding-end: 15px;
+    margin-bottom: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ph-form-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.2);
+  }
+  
+  .ph-form-item ion-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+  }
+  
+  .ph-form-item ion-input, .ph-form-item ion-select {
+    --color: #ffffff;
+    --placeholder-color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+  }
+  
+  .ph-form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .ph-half-width {
+    width: 48%;
+  }
+  
+  /* Seções */
+  .ph-form-section {
+    margin: 20px 0 10px;
+  }
+  
+  .ph-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff4d4d;
+    text-align: center;
+  }
+  
+  /* Checkbox */
+  .ph-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-out;
+    z-index: 1;
+  }
+  
+  .ph-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #ff4d4d;
+    cursor: pointer;
+  }
+  
+  .ph-check-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+  }
+  
+  /* Botão Continuar */
+  .ph-continue-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background: #ff4d4d;
+    border: none;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1.2s ease-out;
+    z-index: 1;
+  }
+  
+  .ph-continue-btn:hover {
+    background: #ff6666;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
+  }
+  
+  /* Toast */
+  .ph-toast {
+    --background: rgba(255, 77, 77, 0.9);
+    --color: #ffffff;
+  }
+  
+  /* Animações */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes floatOrb {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, -20px) scale(1.05); }
+  }
+  
+  @keyframes textGlow {
+    0% { text-shadow: 0 0 5px rgba(255, 77, 77, 0.5); }
+    100% { text-shadow: 0 0 15px rgba(255, 77, 77, 0.8); }
+  }

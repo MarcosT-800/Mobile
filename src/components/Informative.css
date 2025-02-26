@@ -1,0 +1,311 @@
+/* NewsPage.css */
+:root {
+    --primary-red: #D70404;
+    --primary-gradient: linear-gradient(135deg, #D70404 0%, #FF4646 100%);
+    --secondary-gradient: linear-gradient(135deg, #2C2C2C 0%, #3D3D3D 100%);
+  }
+  
+  /* Header Styles */
+  .news-header ion-toolbar {
+    --background: white;
+    --border-width: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .news-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .news-title-icon {
+    color: var(--primary-red);
+    font-size: 28px;
+  }
+  
+  /* Featured Banner */
+  .featured-banner {
+    height: 400px;
+    background: var(--primary-gradient);
+    position: relative;
+    overflow: hidden;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    animation: gradientShift 8s ease infinite;
+  }
+  
+  .featured-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/path/to/pattern.png');
+    opacity: 0.1;
+    animation: patternMove 20s linear infinite;
+  }
+  
+  .featured-content {
+    max-width: 600px;
+    color: white;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .featured-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  .featured-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    animation: fadeUp 0.5s ease-out 0.2s both;
+  }
+  
+  .featured-content p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 32px;
+    animation: fadeUp 0.5s ease-out 0.4s both;
+  }
+  
+  .learn-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: white;
+    color: var(--primary-red);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeUp 0.5s ease-out 0.6s both;
+  }
+  
+  .learn-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Categories Scroll */
+  .categories-scroll {
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .categories-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .category-chip {
+    --background: #f5f5f5;
+    --color: #666;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .category-chip.active {
+    --background: var(--primary-red);
+    --color: white;
+    box-shadow: 0 4px 12px rgba(215, 4, 4, 0.2);
+  }
+  
+  /* News Grid */
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 24px;
+  }
+  
+  .news-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .news-card:hover .card-image-container img {
+    transform: scale(1.05);
+  }
+  
+  .trending-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(215, 4, 4, 0.9);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+  }
+  
+  .news-category {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 16px;
+    transition: gap 0.3s ease;
+  }
+  
+  .read-more:hover {
+    gap: 8px;
+  }
+  
+  /* Newsletter Section */
+  .newsletter-section {
+    background: var(--secondary-gradient);
+    padding: 64px 24px;
+    margin-top: 48px;
+    text-align: center;
+    color: white;
+  }
+  
+  .newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .newsletter-content h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  
+  .subscription-form {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  
+  .subscription-form input {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .subscription-form button {
+    padding: 12px 32px;
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .subscription-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(215, 4, 4, 0.3);
+  }
+  
+  /* Animations */
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes patternMove {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(100%) translateY(100%); }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

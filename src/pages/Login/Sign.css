@@ -1,0 +1,50 @@
+/* Removendo os estilos padrão do Ionic */
+ion-input {
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --border-radius: 0;
+    --background: transparent;
+    --box-shadow: none;
+    --border: none;
+    --color: black; /* Cor do texto */
+  }
+  
+  /* Estilizando os inputs */
+  .custom-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: black; /* Garantindo que o texto seja preto */
+    border: 1px solid #ccc; /* Cor do contorno */
+    border-radius: 5px;
+    background-color: #fff; /* Cor de fundo branco */
+    box-shadow: none;
+  }
+  
+  /* Estilizando o label */
+  .custom-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  /* Removendo o botão de contorno da área de input */
+  .custom-input-input {
+    border: none;
+    background: transparent;
+  }
+  
+  /* Ajustando o tamanho dos inputs com ícones */
+  .input-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .custom-input-input{ 
+    padding.;
+
+  }
+  

@@ -1,0 +1,154 @@
+.title-header-notification {
+    color: #878787;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.simulation-card {
+  background: linear-gradient(145deg, #ffffff, #f8f9ff);
+  border-radius: 24px;
+  padding: 2rem;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.simulation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #ff3b3b, #ff5c5c);
+  border-radius: 24px 24px 0 0;
+}
+
+.icon-wrapper {
+  background: linear-gradient(135deg, #ff3b3b08, #ff5c5c08);
+  border-radius: 50%;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.paperplane-icon {
+  width: 60px;
+  height: 60px;
+  fill: #ff3b3b;
+  transform-origin: center;
+  animation: sendPlane 15s ease-in-out infinite;
+}
+
+.content-container {
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.simulation-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ff3b3b, #ff5c5c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.simulation-description {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.simulation-button {
+  background: linear-gradient(135deg, #ff3b3b, #ff5c5c);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 59, 59, 0.2);
+}
+
+.simulation-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 59, 59, 0.3);
+}
+
+.button-shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes sendPlane {
+  0%, 100% { transform: rotate(0) scale(1); }
+  50% { transform: rotate(5deg) scale(1.05); }
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Adicionar efeito de hover no card */
+.simulation-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Adicionar efeito de hover no ícone */
+.simulation-card:hover .paperplane-icon {
+  animation: quickSend 0.5s ease-in-out;
+}
+
+@keyframes quickSend {
+  0% { transform: translate(0) rotate(0); }
+  50% { transform: translate(10px, -10px) rotate(10deg); }
+  100% { transform: translate(0) rotate(0); }
+}

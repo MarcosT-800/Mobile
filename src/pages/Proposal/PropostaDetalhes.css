@@ -1,0 +1,95 @@
+/* Wrapper Geral */
+.proposal-details-wrapper {
+    padding: 20px;
+    border-radius: 16px;
+    background: #f5f5f5; /* Fundo suave igual ao conteúdo */
+}
+
+/* Card de Detalhes */
+.proposal-details-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Pra bordas arredondadas funcionarem bem */
+}
+
+/* Header do Card */
+.details-header {
+    padding: 15px 20px;
+    background: linear-gradient(90deg, #f3efef 0%, #eeeeee 100%); /* Gradiente vermelho pra destacar */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.details-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff; /* Branco pra contrastar com o gradiente */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Corpo do Card */
+.details-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre as linhas */
+}
+
+/* Linha de Detalhe */
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f9f9f9; /* Fundo claro pra cada item */
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.detail-row:hover {
+    background: #f0f0f0; /* Hover sutil pra interatividade */
+}
+
+/* Rótulo */
+.detail-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666; /* Cinza pra não roubar atenção */
+    text-transform: uppercase;
+}
+
+/* Valor */
+.detail-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333; /* Escuro pra destaque */
+}
+
+/* Destaque pro Valor Liberado */
+.detail-row.highlight {
+    background: #eafaf1; /* Verde claro pra destacar */
+}
+
+.detail-row.highlight .detail-value {
+    color: #34c759; /* Verde pra combinar com o tema */
+}
+
+/* Status */
+.detail-value.status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    background: #e0e0e0; /* Fundo neutro */
+    color: #666;
+}
+
+/* Ajuste pra Loading */
+.loading-text {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    padding: 20px;
+}

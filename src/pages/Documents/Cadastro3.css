@@ -1,0 +1,137 @@
+.custom-cadastro3-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 24px;
+    margin-top: 70px;
+    margin-left: 25px;
+    margin-bottom: 40px;
+}
+
+.input-wrapper sc-ion-input-ios {
+    --border: none;
+    --inner-border: none;
+}
+
+
+.custom-cadastro3-navbar button {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: var(--White-Aqua, #F0FAFA);
+    align-items: center;
+}
+
+
+.custom-cadastro3-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    justify-content: center;
+}
+
+.custom-cadastro3-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+}
+
+.custom-cadastro3-content-header {
+    display: flex;
+    padding: 0px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.custom-cadastro3-content-header h3 {
+    align-self: stretch;
+    color: #242731;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 112.5% */
+}
+
+.custom-cadastro3-content-header p {
+    align-self: stretch;
+    color: #575F6E;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22px; /* 137.5% */
+}
+
+hr {
+    /* Thick red border */
+    width: 100%;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid 575F6E;
+    background-color: #dddddd;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.custom-cadastro3-form-header h3{
+    align-self: stretch;
+    color: #242731;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 140% */
+    margin-bottom: 1px;
+}
+
+.custom-cadastro3-form-header p {
+    align-self: stretch;
+    color: #575F6E;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 133.333% */
+    margin-bottom: 15px;
+}
+
+.custom-cadastro3-form-field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 20px;
+    width: 100%;
+}
+
+.custom-cadastro3-form-field label {
+    align-self: stretch;
+    color: #242426;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    margin-left: 5px;
+}
+
+.custom-input-gen {
+    display: flex;
+}
+
+.input-wrapper {
+    border: none;
+}
+
+
